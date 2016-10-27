@@ -8,6 +8,23 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface GameScene : SKScene
+@interface GameScene : SKScene {
+    
+    NSTimeInterval dt;
+    NSTimeInterval lastUpdatedTime;
+    
+    SKSpriteNode *runner;
+    NSArray *runningManFrames;
+    
+    bool isDamaged;
+    bool isJumping;
+    int speed;
+    int hits;
+    
+    // actions
+    SKAction *jumpMovement;
+    SKAction *jumpAnimation;
+}
+
 
 @end
